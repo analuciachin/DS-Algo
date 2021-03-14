@@ -30,3 +30,9 @@ function reverse(str) {
 }
 
 reverse("Hi My name is Ana");
+
+function reverse2(str) {
+  return str.split("").reverse().join("");
+}
+
+const reverse3 = (str) => [...str].reverse().join("");
