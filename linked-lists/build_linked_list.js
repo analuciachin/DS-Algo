@@ -1,4 +1,4 @@
-// 10 --> 5 --> 16
+// 1 --> 10 --> 5 --> 16
 
 // let myLinkedList = {
 //   head: {
@@ -22,8 +22,25 @@ class LinkedList {
     this.tail = this.head;
     this.length = 1;
   }
-  append(value) {}
+
+  // add the end of the list
+  append(value) {
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
+    return this;
+  }
+
+  // add to the beginning of the list
+  prepend(value) {}
 }
 
-const myLinkedLIst = new LinkedList(10);
-console.log(myLinkedLIst);
+const myLinkedList = new LinkedList(10);
+myLinkedList.append(5);
+myLinkedList.append(16);
+myLinkedList.prepend(1);
+console.log(myLinkedList);
