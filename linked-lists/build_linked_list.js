@@ -13,6 +13,13 @@
 //   },
 // };
 
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
 class LinkedList {
   constructor(value) {
     this.head = {
@@ -25,6 +32,11 @@ class LinkedList {
 
   // add the end of the list
   append(value) {
+    // we could use the Node class
+    // const newNode = new Node(value);
+
+    // or create it inside the append method
+
     const newNode = {
       value: value,
       next: null,
