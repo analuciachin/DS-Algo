@@ -1,4 +1,4 @@
-// 1 --> 10 --> 5 --> 16
+// 1 --> 10 --> 99 --> 5 --> 16
 
 // let myLinkedList = {
 //   head: {
@@ -58,10 +58,47 @@ class LinkedList {
     this.length++;
     return this;
   }
+
+  printList() {
+    const array = [];
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      array.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    return array;
+  }
+
+  insert(index, value) {
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    let currentNode = this.head;
+
+    if (index >= this.length) {
+      return this.append(value);
+    } else if (index === 0) {
+      return this.prepend(value);
+    } else {
+      for (let i = 0; i <= index; i++) {
+        if (i === index - 1) {
+          const nextNode = currentNode.next;
+          currentNode.next = newNode;
+          newNode.next = nextNode;
+        }
+        currentNode = currentNode.next;
+      }
+    }
+    return this;
+  }
 }
 
 const myLinkedList = new LinkedList(10);
 myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.prepend(1);
+myLinkedList.insert(2, 99);
+//myLinkedList.insert(3, 7);
+console.log(myLinkedList.printList());
 console.log(myLinkedList);
