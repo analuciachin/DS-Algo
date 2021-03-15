@@ -36,7 +36,16 @@ class LinkedList {
   }
 
   // add to the beginning of the list
-  prepend(value) {}
+  prepend(value) {
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+    return this;
+  }
 }
 
 const myLinkedList = new LinkedList(10);
