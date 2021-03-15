@@ -86,6 +86,7 @@ class LinkedList {
           const nextNode = currentNode.next;
           currentNode.next = newNode;
           newNode.next = nextNode;
+          this.length++;
         }
         currentNode = currentNode.next;
       }
@@ -100,5 +101,5 @@ myLinkedList.append(16);
 myLinkedList.prepend(1);
 myLinkedList.insert(2, 99);
 //myLinkedList.insert(3, 7);
-console.log(myLinkedList.printList());
+//console.log(myLinkedList.printList());
 console.log(myLinkedList);
