@@ -1,6 +1,6 @@
 # Data Structure and Algorithms
 
-This github repo is to keep notes of the Data Structure and Algorithms courses I am taking from Andrei Neagoie and Colt Steele and all the exercises I have completed.
+This github repo is to keep notes of the Data Structure and Algorithms courses I am taking from Andrei Neagoie and Colt Steele and a reference of all the exercises I have completed.
 
 ## Big O
 
@@ -17,6 +17,7 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
 ## Data Structure
 
 - Arrays
+
   - lookup (look for an element in an array): O(1)
   - push (add an element at the end of an array): O(1)
   - pop (remove the last item of an array): O(1)
@@ -24,3 +25,9 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
   - splice (add/delete items in the middle of an array): O(n)
   - insert: O(n)
   - delete: O(n)
+
+- Hash Tables (Objects in JS)
+  - insert: O(1)
+  - lookup: O(1)
+  - delete: O(1)
+  - search: O(1)
