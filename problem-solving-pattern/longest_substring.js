@@ -61,3 +61,5 @@ console.log(longestSubstring("abcabcbb"));
 console.log(longestSubstring("bbbbb"));
 console.log(longestSubstring("pwwkew"));
 console.log(longestSubstring(""));
+
+// time complexity: O(n)

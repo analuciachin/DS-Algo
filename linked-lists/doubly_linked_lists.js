@@ -57,10 +57,10 @@ class DoublyLinkedList {
 
   insert(index, value) {
     // todo: check params
-    // todo: convert this method for doubly linked list
     const newNode = {
       value: value,
       next: null,
+      prev: null,
     };
     let currentNode = this.head;
 
@@ -72,6 +72,7 @@ class DoublyLinkedList {
       for (let i = 0; i <= index; i++) {
         if (i === index - 1) {
           const nextNode = currentNode.next;
+          newNode.prev = currentNode;
           currentNode.next = newNode;
           newNode.next = nextNode;
           this.length++;
@@ -84,7 +85,6 @@ class DoublyLinkedList {
 
   remove(index) {
     // todo: check params
-    // todo: convert this method for doubly linked list
     let currentNode = this.head;
 
     if (index === 0) {
@@ -102,6 +102,7 @@ class DoublyLinkedList {
         } else if (i === index - 1) {
           const newNext = currentNode.next.next;
           currentNode.next = newNext;
+          newNext.prev = currentNode;
           this.length--;
         }
         currentNode = currentNode.next;
@@ -114,11 +115,11 @@ class DoublyLinkedList {
 
 const myLinkedList = new DoublyLinkedList(10);
 myLinkedList.append(5);
-myLinkedList.append(16);
+// myLinkedList.append(16);
 myLinkedList.prepend(1);
-// myLinkedList.insert(2, 99);
+myLinkedList.insert(1, 99);
 // myLinkedList.insert(3, 7);
-// myLinkedList.remove(5);
+myLinkedList.remove(1);
 // myLinkedList.remove(3);
 
 console.log(myLinkedList.printList());

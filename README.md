@@ -12,7 +12,7 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
 - O(n^2): Exponential - recursive algorithms that solves a problem of size n
 - O(n!): Factorial - adding a loop for every element
 
-_Iterating through half a collection is still O(n). Two separate collections is O(a \* b)_
+- _Iterating through half a collection is still O(n). Two separate collections is O(a \* b)_
 
 ## Data Structure
 
@@ -27,9 +27,10 @@ _Iterating through half a collection is still O(n). Two separate collections is 
   - delete: O(n)
 
 - Hash Tables (Objects in JS)
+
   - insert: O(1)
   - lookup: O(1)
   - delete: O(1)
   - search: O(1)
 
-_could be O(n) with hash collisions and dynamic array resizing but unlikely_
+  - _could be O(n) with hash collisions and dynamic array resizing but unlikely_
