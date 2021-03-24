@@ -42,3 +42,17 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
   - lookup: O(n)
   - insert: O(n)
   - delete: O(n)
+
+- Stacks
+
+  - lookup: O(n)
+  - pop: O(1)
+  - push: O(1)
+  - peek (first one to come out - last item): O(1)
+
+- Queues
+
+  - lookup: O(n)
+  - enqueue (like push): O(1)
+  - dequeue (like pop - first one in line): O(1)
+  - peek (first one to come out - first item): O(1)
