@@ -34,3 +34,11 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
   - search: O(1)
 
   - _could be O(n) with hash collisions and dynamic array resizing but unlikely_
+
+- Linked List
+
+  - prepend: O(1)
+  - append: O(1)
+  - lookup: O(n)
+  - insert: O(n)
+  - delete: O(n)
