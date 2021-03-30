@@ -32,13 +32,33 @@ class Stack {
   }
 
   // remove from the top of the stack
-  pop() {}
+  pop() {
+    if (!this.top) {
+      return null;
+    }
+    if (this.top === this.bottom) {
+      this.bottom = null;
+    }
+    //const holdingPointer = this.top;
+    this.top = this.top.next;
+    this.length--;
+    return this;
+  }
 
   // check if the stack is empty
-  isEmpty() {}
+  isEmpty() {
+    if (this.length === 0) {
+      return true;
+    } else return false;
+  }
 }
 
 const myStack = new Stack();
 console.log(myStack.push("google"));
 console.log(myStack.push("udemy"));
 console.log(myStack.push("discord"));
+console.log(myStack.peek());
+console.log(myStack.pop());
+console.log(myStack.pop());
+//console.log(myStack.pop());
+console.log(myStack.isEmpty());
