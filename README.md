@@ -50,9 +50,13 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
   - push: O(1)
   - peek (first one to come out - last item): O(1)
 
+  - _for stacks we can implement it using either arrays or linked lists_
+
 - Queues
 
   - lookup: O(n)
   - enqueue (like push): O(1)
   - dequeue (like pop - first one in line): O(1)
   - peek (first one to come out - first item): O(1)
+
+  - _for queues ideally is best to implement with a linked list_
