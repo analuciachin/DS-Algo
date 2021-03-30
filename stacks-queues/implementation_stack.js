@@ -1,3 +1,5 @@
+// Stack with Linked List
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -53,12 +55,50 @@ class Stack {
   }
 }
 
-const myStack = new Stack();
+// const myStack = new Stack();
+// console.log(myStack.push("google"));
+// console.log(myStack.push("udemy"));
+// console.log(myStack.push("discord"));
+// console.log(myStack.peek());
+// console.log(myStack.pop());
+// console.log(myStack.pop());
+// //console.log(myStack.pop());
+// console.log(myStack.isEmpty());
+
+// Stack with Arrays
+
+class StackWithArray {
+  constructor() {
+    this.array = [];
+  }
+
+  peek() {
+    return this.array[this.array.length - 1];
+  }
+
+  push(value) {
+    this.array.push(value);
+    return this;
+  }
+
+  pop() {
+    this.array.pop();
+    return this;
+  }
+
+  isEmpty() {
+    if (this.array.length === 0) {
+      return true;
+    } else return false;
+  }
+}
+
+const myStack = new StackWithArray();
 console.log(myStack.push("google"));
 console.log(myStack.push("udemy"));
 console.log(myStack.push("discord"));
 console.log(myStack.peek());
 console.log(myStack.pop());
 console.log(myStack.pop());
-//console.log(myStack.pop());
+// //console.log(myStack.pop());
 console.log(myStack.isEmpty());
