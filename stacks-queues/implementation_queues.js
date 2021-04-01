@@ -50,7 +50,9 @@ class Queue {
 
   // remove an item from the queue
   dequeue() {
-    if (this.length === 1) {
+    if (!this.first) {
+      return null;
+    } else if (this.length === 1) {
       this.first = null;
       this.last = null;
     } else {
@@ -73,7 +75,7 @@ console.log(myQueue.enqueue("Joy"));
 console.log(myQueue.enqueue("Matt"));
 console.log(myQueue.enqueue("Pavel"));
 console.log(myQueue.enqueue("Samir"));
-// console.log(myQueue.dequeue());
+console.log(myQueue.dequeue());
 // console.log(myQueue.peek());
 console.log(myQueue.isEmpty());
 // console.log(myQueue.enqueue1("Joy"));
