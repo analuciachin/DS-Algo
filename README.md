@@ -60,3 +60,20 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
   - peek (first one to come out - first item): O(1)
 
   - _for queues ideally is best to implement with a linked list_
+
+- Trees
+
+  - Binary Tree
+
+    - _each node can either have 0, 1 or 2 nodes_
+    - _each child can only have one parent_
+    - lookup: O(log n)
+    - insert: O(log n)
+    - delete: O(log n)
+
+    - Binary Search Tree
+      - if we go to the right of the current node, the value increases
+      - if we go to the left of the current node, the value decreases
+      - lookup: O(log n)
+      - insert: O(log n)
+      - delete: O(log n)
