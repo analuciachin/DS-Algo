@@ -40,10 +40,10 @@ class BinarySearchTree {
 
   lookup(value) {
     if (this.root === null) {
-      return null;
+      return false;
     } else {
       let currentNode = this.root;
-      while (currentNode.left !== null || currentNode.right !== null) {
+      while (currentNode) {
         if (currentNode.value === value) {
           return currentNode;
         } else if (currentNode.value < value) {
@@ -53,6 +53,7 @@ class BinarySearchTree {
         }
       }
     }
+    return false;
   }
 }
 
@@ -72,6 +73,9 @@ tree.insert(20);
 tree.insert(15);
 tree.insert(170);
 console.log(JSON.stringify(traverse(tree.root)));
+
+console.log(tree.lookup(50));
+console.log(tree.lookup(4));
 
 //        9
 //    4       20
