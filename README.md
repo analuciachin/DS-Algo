@@ -71,9 +71,16 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
     - insert: O(log n)
     - delete: O(log n)
 
-    - Binary Search Tree
+    - Binary Search Tree (Balanced)
+
       - if we go to the right of the current node, the value increases
       - if we go to the left of the current node, the value decreases
       - lookup: O(log n)
       - insert: O(log n)
       - delete: O(log n)
+
+    - Binary Search Tree (Unbalanced)
+
+      - lookup: O(n)
+      - insert: O(n)
+      - delete: O(n)
