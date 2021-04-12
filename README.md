@@ -84,3 +84,13 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
       - lookup: O(n)
       - insert: O(n)
       - delete: O(n)
+
+    - Binary Heap
+
+      - lookup: O(n)
+      - insert: O(log n)
+      - delete: O(log n)
+      - _the nodes in a higher level have greater values than the nodes in a lower nodes (parent always have greater values than the children)_
+      - _priority queues_
+
+    - Graphs
