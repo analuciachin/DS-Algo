@@ -12,5 +12,21 @@ function reverseString(str) {
   return newStr;
 }
 
-console.log(reverseString("yoyo mastery"));
+//console.log(reverseString("yoyo mastery"));
+//should return: 'yretsam oyoy'
+
+let counter = -1;
+const letter = [];
+function reverseStringRecursive(str) {
+  if (counter === str.length) {
+    console.log(counter);
+    let newStr = letter.reverse().toString();
+    return newStr.replace(/\,/g, "");
+  }
+  counter++;
+  letter.push(str[counter]);
+  return reverseStringRecursive(str);
+}
+
+console.log(reverseStringRecursive("yoyo mastery"));
 //should return: 'yretsam oyoy'
