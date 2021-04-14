@@ -110,3 +110,10 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
         [1,1,0,1],
         [0,1,1,0]
         ]
+
+## Algorithms
+
+- Sorting
+
+  - Bubble Sort: O(n^2)
+  - Selection Sort: O(n^2)
