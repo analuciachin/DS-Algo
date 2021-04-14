@@ -1,0 +1,25 @@
+const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+
+function bubbleSort(array) {
+  let round = 0;
+
+  while (round < array.length) {
+    for (let i = 0; i < array.length - 1; i++) {
+      for (let j = i + 1; j < array.length; j++) {
+        if (array[i] > array[j]) {
+          const low = array[j];
+          const high = array[i];
+          array[i] = low;
+          array[j] = high;
+        } else {
+          i++;
+        }
+      }
+    }
+    round++;
+  }
+  return array;
+}
+
+console.log(numbers);
+console.log(bubbleSort(numbers));
