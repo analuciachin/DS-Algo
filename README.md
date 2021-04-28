@@ -117,3 +117,6 @@ This github repo is to keep notes of the Data Structure and Algorithms courses I
 
   - Bubble Sort: O(n^2)
   - Selection Sort: O(n^2)
+  - Insertion Sort: O(n^2)
+  - Merge Sort: O(n log n) - using the divide and conquer technique
+  - Quick Sort: O(n log n) - using the divide and conquer technique
