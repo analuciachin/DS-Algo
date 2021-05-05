@@ -45,6 +45,7 @@ function fibonacciRecursive(n) {
 }
 
 console.log(fibonacciRecursive(8));
+// time complexity: O(n)
 
 // Dynamic Programming - Memoization
 function fibonacciMaster() {
@@ -66,3 +67,14 @@ function fibonacciMaster() {
 
 const fasterFib = fibonacciMaster();
 console.log("DP", fasterFib(10));
+// time complexity: O(n)
+
+function fibonacciMaster2(n) {
+  let answer = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    answer.push(answer[i - 2] + answer[i - 1]);
+  }
+  return answer.pop();
+}
+
+console.log("DP2", fibonacciMaster2(10));
