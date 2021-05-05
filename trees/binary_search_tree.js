@@ -170,6 +170,51 @@ class BinarySearchTree {
     }
     return this.breadthFirstSearchRecursive(queue, list);
   }
+
+  DFSInOrder() {
+    return traverseInOrder(this.root, []);
+  }
+
+  DFSPostOrder() {
+    return traversePostOrder(this.root, []);
+  }
+
+  DFSPreOrder() {
+    return traversePreOrder(this.root, []);
+  }
+}
+
+function traverseInOrder(node, list) {
+  if (node.left) {
+    traverseInOrder(node.left, list);
+  }
+  list.push(node.value);
+  if (node.right) {
+    traverseInOrder(node.right, list);
+  }
+  return list;
+}
+
+function traversePreOrder(node, list) {
+  list.push(node.value);
+  if (node.left) {
+    traversePreOrder(node.left, list);
+  }
+  if (node.right) {
+    traversePreOrder(node.right, list);
+  }
+  return list;
+}
+
+function traversePostOrder(node, list) {
+  if (node.left) {
+    traversePostOrder(node.left, list);
+  }
+  if (node.right) {
+    traversePostOrder(node.right, list);
+  }
+  list.push(node.value);
+  return list;
 }
 
 function traverse(node) {
@@ -193,12 +238,20 @@ tree.remove(10);
 
 // console.log(tree.lookup(50));
 // console.log(tree.lookup(4));
-console.log("breadth first search", tree.breadthFirstSearch());
-console.log(
-  "breadth first search recursive",
-  tree.breadthFirstSearchRecursive([tree.root], [])
-);
+// console.log("breadth first search", tree.breadthFirstSearch());
+// console.log(
+//   "breadth first search recursive",
+//   tree.breadthFirstSearchRecursive([tree.root], [])
+// );
+console.log(tree.DFSInOrder());
+console.log(tree.DFSPostOrder());
+console.log(tree.DFSPreOrder());
 
 //        9
 //    4       20
 //  1   6   15  170
+
+// Depth First Search
+// InOrder - [1, 4, 6, 9, 15, 20, 170]
+// PreOrder - [9, 4, 1, 6, 20, 15, 170]
+// PostOrder - [1, 6, 4, 15, 170, 20, 9]
