@@ -45,3 +45,24 @@ function fibonacciRecursive(n) {
 }
 
 console.log(fibonacciRecursive(8));
+
+// Dynamic Programming - Memoization
+function fibonacciMaster() {
+  let cache = {};
+  // return function - JS closure
+  return function fib(n) {
+    if (n in cache) {
+      return cache[n];
+    } else {
+      if (n < 2) {
+        return n;
+      } else {
+        cache[n] = fib(n - 1) + fib(n - 2);
+        return cache[n];
+      }
+    }
+  };
+}
+
+const fasterFib = fibonacciMaster();
+console.log("DP", fasterFib(10));
